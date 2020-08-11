@@ -1,0 +1,579 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/georgia.eot");
+  src: local("☺"), url("../fonts/georgia.woff") format("woff"), url("../fonts/georgia.ttf") format("truetype"), url("../fonts/georgia.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeorgiaBold";
+  src: url("../fonts/georgiab.eot");
+  src: local("☺"), url("../fonts/georgiab.woff") format("woff"), url("../fonts/georgiab.ttf") format("truetype"), url("../fonts/georgiab.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #505050;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.container-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.title {
+  font-family: "Georgia";
+  font-size: 32px;
+  line-height: 1.18;
+  color: #4e5665;
+}
+
+.text {
+  line-height: 1.75;
+  font-size: 16px;
+  text-align: left;
+}
+
+.header {
+  border-bottom: 1px solid #d0d4d8;
+}
+
+.header__top {
+  background: url(../images/header-main.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  padding: 40px;
+}
+
+.header__top-inner {
+  border: 2px solid #ecb84c;
+  border-bottom: none;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.header__title {
+  font-family: "GeorgiaBold";
+  font-size: 200px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.header__text {
+  font-family: "Georgia";
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  margin-bottom: -12px;
+}
+
+.header__text:before, .header__text:after {
+  content: "";
+  border-top: 2px solid #ecb84c;
+  width: 100%;
+}
+
+.header__text:before {
+  margin-right: 30px;
+}
+
+.header__text:after {
+  margin-left: 30px;
+}
+
+.header__menu {
+  padding: 25px 0px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__list-link {
+  font-weight: bold;
+  color: #909090;
+  padding: 24px 10px 21px;
+  margin: 0px 6px;
+  -webkit-transition: color 0.3s linear 0s;
+  transition: color 0.3s linear 0s;
+  border-bottom: 4px solid transparent;
+}
+
+.header__list-link:hover {
+  color: #4e5665;
+  border-bottom: 4px solid #ecb84c;
+}
+
+.reason__inner {
+  text-align: center;
+  padding: 80px 0px;
+  border-bottom: 1px solid #d0d4d8;
+}
+
+.reason__title {
+  margin-bottom: 20px;
+}
+
+.reason__text {
+  margin: 0px 0px 10px 0px;
+}
+
+.reason__link {
+  text-align: right;
+}
+
+.reason__link a {
+  font-size: 16px;
+  color: #ecb84c;
+}
+
+.reason__stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 35px 0px 0px 0px;
+}
+
+.reason__icon {
+  margin-bottom: 30px;
+}
+
+.reason__info {
+  font-weight: 700;
+}
+
+.reason__count {
+  font-size: 22px;
+  line-height: 1.32;
+  margin-bottom: 5px;
+  color: #4e5665;
+}
+
+.reason__type {
+  color: #909090;
+}
+
+.about__inner {
+  padding: 80px 0px 120px 0px;
+  text-align: center;
+}
+
+.about__inner-help {
+  padding: 0px 0px 80px 0px;
+  text-align: center;
+  border-bottom: 1px solid #d0d4d8;
+}
+
+.about__title {
+  margin: 0px 0px 15px 0px;
+}
+
+.about__title-help {
+  margin-bottom: 40px;
+}
+
+.about__text {
+  margin: 0px 0px 70px 0px;
+}
+
+.about__item {
+  padding: 70px 0px;
+  background-repeat: no-repeat;
+  margin: 0px 0px 100px 0px;
+  background-position: right;
+}
+
+.about__item:last-child {
+  margin-bottom: 0px;
+}
+
+.about__item:nth-child(even) {
+  background-position: left;
+}
+
+.about__item:nth-child(even) .about__box {
+  margin-left: auto;
+}
+
+.about__item:nth-child(even) .about__box:before {
+  top: 19px;
+  right: 19px;
+  left: auto;
+  border-top: 2px solid #ecb84c;
+  border-right: 2px solid #ecb84c;
+  border-left: none;
+}
+
+.about__item:nth-child(even) .about__box:after {
+  bottom: 19px;
+  left: 19px;
+  border-bottom: 2px solid #ecb84c;
+  border-left: 2px solid #ecb84c;
+  border-right: none;
+}
+
+.about__box {
+  padding: 33px 40px;
+  background-color: #fff;
+  max-width: 470px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.about__box:before, .about__box:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 33px;
+  height: 33px;
+}
+
+.about__box:before {
+  top: 19px;
+  left: 19px;
+  border-top: 2px solid #ecb84c;
+  border-left: 2px solid #ecb84c;
+}
+
+.about__box:after {
+  bottom: 19px;
+  right: 19px;
+  border-bottom: 2px solid #ecb84c;
+  border-right: 2px solid #ecb84c;
+}
+
+.about__box-title {
+  font-family: "Georgia";
+  font-size: 24px;
+  color: #4e5665;
+  margin-bottom: 20px;
+}
+
+.about__box-text {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.about__photo {
+  padding-top: 70px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(236, 184, 76, 0.75);
+  position: absolute;
+  cursor: pointer;
+}
+
+.about__dot:hover:before,
+.about__dot:hover .about__dot-text {
+  opacity: 1;
+}
+
+.about__dot--1 {
+  top: 190px;
+  left: 148px;
+}
+
+.about__dot--2 {
+  top: 188px;
+  left: 495px;
+}
+
+.about__dot--3 {
+  top: 147px;
+  right: 374px;
+}
+
+.about__dot--4 {
+  bottom: 28px;
+  right: 299px;
+}
+
+.about__dot:before {
+  content: "";
+  background: url(../images/line.svg);
+  width: 244px;
+  height: 122px;
+  position: absolute;
+  top: -113px;
+  left: 23px;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.about__dot:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffd600;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.about__dot-text {
+  position: absolute;
+  font-weight: 700;
+  white-space: nowrap;
+  top: -140px;
+  left: 147px;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear 0.3s;
+  transition: all 0.3s linear 0.3s;
+}
+
+.photo {
+  border-bottom: 1px solid #d0d4d8;
+}
+
+.photo__inner {
+  text-align: center;
+  padding: 80px 0px;
+}
+
+.photo__title {
+  margin-bottom: 40px;
+}
+
+.photo__text:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 350px;
+  background-color: #d0d4d8;
+  margin: 50px auto;
+}
+
+.photo__slider {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1200;
+  outline: none;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.photo__item {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+  outline: none;
+}
+
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
+.footer {
+  background-color: #f8f8f8;
+}
+
+.footer__inner {
+  padding: 55px 0 32px;
+  text-align: center;
+}
+
+.footer__row {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__item {
+  text-align: left;
+  width: 140px;
+}
+
+.footer__item--company {
+  width: 300px;
+  padding-left: 180px;
+}
+
+.footer__item--contact .footer__item-list li {
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.footer__item--contact .footer__item-list li:nth-child(1) {
+  background: url(../images/message.svg) no-repeat left;
+}
+
+.footer__item--contact .footer__item-list li:nth-child(2) {
+  background: url(../images/facebook.svg) no-repeat left;
+}
+
+.footer__item--contact .footer__item-list li:nth-child(3) {
+  background: url(../images/instagram.svg) no-repeat left;
+}
+
+.footer__item--contact .footer__item-list li:nth-child(4) {
+  background: url(../images/youtube.svg) no-repeat left;
+}
+
+.footer__item--contact .footer__item-list li:nth-child(5) {
+  background: url(../images/mail.svg) no-repeat left;
+}
+
+.footer__item--blog {
+  width: 300px;
+}
+
+.footer__item-title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: #4e5665;
+  margin-bottom: 20px;
+}
+
+.footer__item-list li {
+  margin-bottom: 8px;
+}
+
+.footer__item-list li:last-child {
+  margin: 0;
+}
+
+.footer__item-link {
+  line-height: 1.35;
+  color: #505050;
+}
+
+.footer__item-link:hover {
+  opacity: 0.7;
+}

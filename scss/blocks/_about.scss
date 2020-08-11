@@ -1,0 +1,154 @@
+.about__inner {
+	padding: 80px 0px 120px 0px;
+	text-align: center;
+}
+.about__inner-help {
+	padding: 0px 0px 80px 0px;
+	text-align: center;
+	border-bottom: 1px solid #d0d4d8;
+}
+.about__title {
+	margin: 0px 0px 15px 0px;
+	&-help {
+		margin-bottom: 40px;
+	}
+}
+.about__text {
+	margin: 0px 0px 70px 0px;
+}
+.about__item {
+	padding: 70px 0px;
+	background-repeat: no-repeat;
+	margin: 0px 0px 100px 0px;
+	background-position: right;
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	&:nth-child(even) {
+		background-position: left;
+		& .about__box {
+			margin-left: auto;
+			&:before {
+				top: 19px;
+				right: 19px;
+				left: auto;
+				border-top: 2px solid #ecb84c;
+				border-right: 2px solid #ecb84c;
+				border-left: none;
+			}
+			&:after {
+				bottom: 19px;
+				left: 19px;
+				border-bottom: 2px solid #ecb84c;
+				border-left: 2px solid #ecb84c;
+				border-right: none;
+			}
+		}
+	}
+}
+.about__box {
+	padding: 33px 40px;
+	background-color: #fff;
+	max-width: 470px;
+	position: relative;
+	z-index: 2;
+	text-align: left;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 33px;
+		height: 33px;
+	}
+	&:before {
+		top: 19px;
+		left: 19px;
+		border-top: 2px solid #ecb84c;
+		border-left: 2px solid #ecb84c;
+	}
+	&:after {
+		bottom: 19px;
+		right: 19px;
+		border-bottom: 2px solid #ecb84c;
+		border-right: 2px solid #ecb84c;
+	}
+}
+.about__box-title {
+	font-family: "Georgia";
+	font-size: 24px;
+	color: #4e5665;
+	margin-bottom: 20px;
+}
+
+.about__box-text {
+	font-size: 16px;
+	line-height: 1.75;
+}
+
+.about__photo {
+	padding-top: 70px;
+	margin-bottom: 60px;
+	position: relative;
+}
+.about__dot {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: rgba(236, 184, 76, 0.75);
+	position: absolute;
+	cursor: pointer;
+	&:hover {
+		&:before,
+		.about__dot-text {
+			opacity: 1;
+		}
+	}
+	&--1 {
+		top: 190px;
+		left: 148px;
+	}
+	&--2 {
+		top: 188px;
+		left: 495px;
+	}
+	&--3 {
+		top: 147px;
+		right: 374px;
+	}
+	&--4 {
+		bottom: 28px;
+		right: 299px;
+	}
+	&:before {
+		content: "";
+		background: url(../images/line.svg);
+		width: 244px;
+		height: 122px;
+		position: absolute;
+		top: -113px;
+		left: 23px;
+		opacity: 0;
+		transition: all 0.3s linear 0s;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #ffd600;
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
+	}
+}
+.about__dot-text {
+	position: absolute;
+	font-weight: 700;
+	white-space: nowrap;
+	top: -140px;
+	left: 147px;
+	opacity: 0;
+	transition: all 0.3s linear 0.3s;
+}
