@@ -86,18 +86,14 @@ body {
   text-align: left;
 }
 
-.header {
-  border-bottom: 1px solid #d0d4d8;
-}
-
-.header__top {
+.intro {
   background: url(../images/header-main.jpg) no-repeat center;
   background-size: cover;
   height: 100vh;
   padding: 40px;
 }
 
-.header__top-inner {
+.intro__inner {
   border: 2px solid #ecb84c;
   border-bottom: none;
   height: 100%;
@@ -111,14 +107,14 @@ body {
   color: #fff;
 }
 
-.header__title {
+.intro__title {
   font-family: "GeorgiaBold";
   font-size: 200px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   margin: auto;
 }
 
-.header__text {
+.intro__text {
   font-family: "Georgia";
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
   font-size: 24px;
@@ -132,25 +128,43 @@ body {
   margin-bottom: -12px;
 }
 
-.header__text:before, .header__text:after {
+.intro__text:before, .intro__text:after {
   content: "";
   border-top: 2px solid #ecb84c;
   width: 100%;
 }
 
-.header__text:before {
+.intro__text:before {
   margin-right: 30px;
 }
 
-.header__text:after {
+.intro__text:after {
   margin-left: 30px;
 }
 
-.header__menu {
-  padding: 25px 0px;
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 666;
+  width: 100%;
 }
 
-.header__list {
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,11 +174,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 67px;
+  position: relative;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .header__list-link {
   font-weight: bold;
-  color: #909090;
+  color: #352626;
   padding: 24px 10px 21px;
   margin: 0px 6px;
   -webkit-transition: color 0.3s linear 0s;
@@ -576,4 +602,97 @@ body {
 
 .footer__item-link:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .header__title {
+    font-size: 120px;
+  }
+  .header__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header__menu {
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    z-index: 3;
+    overflow: auto;
+    background-color: #7d644c;
+  }
+  .header__menu.active {
+    right: 0%;
+  }
+  .header__burger {
+    display: block;
+    width: 22px;
+    height: 20px;
+    position: relative;
+    z-index: 4;
+  }
+  .header__burger span {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border-radius: 1px;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border-radius: 1px;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__burger.active:before {
+    top: 8px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header__burger.active:after {
+    bottom: 9px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .header__menu .header__list {
+    padding: 60px 20px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }

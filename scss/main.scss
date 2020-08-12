@@ -31,9 +31,12 @@ body {
 	text-align: left;
 }
 
+@import "blocks/_intro.scss";
 @import "blocks/_header.scss";
 @import "blocks/_reason.scss";
 @import "blocks/_about.scss";
 @import "blocks/_photo.scss";
 @import "_slider.scss";
 @import "blocks/_footer.scss";
+@import "_media.scss";
+@import "_burger.scss";

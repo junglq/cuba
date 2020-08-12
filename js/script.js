@@ -29,13 +29,13 @@ $(document).ready(function () {
         checkscroll(scrollOffset);
     })
 
-    function checkscroll(scrollOffset) {
-        if (scrollOffset > 0) {
-            $('.header').addClass('active');
-        } else {
-            $('.header').removeClass('active');
-        }
-    }
+    // function checkscroll(scrollOffset) {
+    //     if (scrollOffset > 0) {
+    //         $('.header').addClass('active');
+    //     } else {
+    //         $('.header').removeClass('active');
+    //     }
+    // }
 
     // Smooth scroll
     $("[data-scroll]").on("click", function (event) {
