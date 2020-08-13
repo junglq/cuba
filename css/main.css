@@ -146,7 +146,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 666;
+  z-index: 6666;
   width: 100%;
 }
 
@@ -189,6 +189,7 @@ body {
 }
 
 .header__list-link {
+  display: block;
   font-weight: bold;
   color: #352626;
   padding: 24px 10px 21px;
@@ -232,7 +233,15 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 35px 0px 0px 0px;
+}
+
+.reason__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
 }
 
 .reason__icon {
@@ -362,6 +371,10 @@ body {
   position: relative;
 }
 
+.about__photo img {
+  max-width: 100%;
+}
+
 .about__dot {
   width: 32px;
   height: 32px;
@@ -451,6 +464,7 @@ body {
   display: block;
   height: 1px;
   width: 350px;
+  max-width: 100%;
   background-color: #d0d4d8;
   margin: 50px auto;
 }
@@ -537,6 +551,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__item {
@@ -604,12 +620,108 @@ body {
   opacity: 0.7;
 }
 
-@media (max-width: 700px) {
-  .header__title {
+@media (max-width: 1075px) {
+  .about__dot {
+    display: none;
+  }
+  .about__photo {
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+  .footer__item {
+    width: 25%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .about__item {
+    padding: 382px 0px 30px;
+    background-position: top;
+    margin-bottom: 0;
+  }
+  .about__item:nth-child(even) {
+    background-position: top;
+  }
+  .about__box {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro__title {
     font-size: 120px;
   }
-  .header__text {
+  .intro__text {
     font-size: 20px;
+  }
+  .reason__inner {
+    padding: 30px 0px;
+  }
+  .about__inner-help {
+    padding-bottom: 40px;
+  }
+  .about__inner {
+    padding: 40px 0px 10px;
+  }
+  .photo__inner {
+    padding: 40px 0px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+  .footer__item {
+    width: 50%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .footer__row {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .intro {
+    padding: 10px;
+  }
+  .intro__title {
+    font-size: 100px;
+  }
+  .intro__text {
+    display: none;
+  }
+  .intro__inner {
+    border: 2px solid #ecb84c;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .reason__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-bottom: 30px;
+  }
+  .about__inner {
+    padding-top: 30px;
+  }
+  .about__text {
+    margin-bottom: 40px;
+  }
+  .footer__item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .reason__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -647,7 +759,7 @@ body {
     top: 8px;
     width: 100%;
     height: 3px;
-    background-color: #000;
+    background-color: #ecb84c;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
     border-radius: 1px;
@@ -659,7 +771,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #000;
+    background-color: #ecb84c;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
     border-radius: 1px;
@@ -676,16 +788,16 @@ body {
   }
   .header__burger.active:before {
     top: 8px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
   .header__burger.active:after {
     bottom: 9px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
   }
   .header__menu .header__list {
-    padding: 60px 20px 10px;
+    padding: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -694,5 +806,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .header__list-item {
+    margin-bottom: 30px;
+  }
+  .header__list-item a {
+    padding: 0;
+    margin: 0;
   }
 }

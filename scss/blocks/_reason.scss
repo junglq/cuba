@@ -19,9 +19,11 @@
 .reason__stat {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	margin: 35px 0px 0px 0px;
 }
 .reason__item {
+	flex: 0 1 25%;
 }
 .reason__icon {
 	margin-bottom: 30px;

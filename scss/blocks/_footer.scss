@@ -9,6 +9,7 @@
 	margin-bottom: 40px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .footer__item {
 	text-align: left;
@@ -50,6 +51,7 @@
 	text-transform: uppercase;
 	color: #4e5665;
 	margin-bottom: 20px;
+	// cursor: pointer;
 }
 .footer__item-list li {
 	margin-bottom: 8px;

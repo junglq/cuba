@@ -21,13 +21,13 @@ $(document).ready(function () {
     })
 
     // Fixed Header
-    let scrollOffset = $(window).scrollTop();
-    checkscroll(scrollOffset);
+    // let scrollOffset = $(window).scrollTop();
+    // checkscroll(scrollOffset);
 
-    $(window).on('scroll resize', function () {
-        scrollOffset = $(this).scrollTop();
-        checkscroll(scrollOffset);
-    })
+    // $(window).on('scroll resize', function () {
+    //     scrollOffset = $(this).scrollTop();
+    //     checkscroll(scrollOffset);
+    // })
 
     // function checkscroll(scrollOffset) {
     //     if (scrollOffset > 0) {
@@ -54,13 +54,13 @@ $(document).ready(function () {
     })
 
     // Accordion
-    $('.block__title').click(function () {
-        if ($('.block').hasClass('one')) {
-            $('.block__title').not($(this)).removeClass('active');
-            $('.block__text').not($(this).next()).slideUp(300);
-        }
-        $(this).toggleClass('active').next().slideToggle(300);
-    })
+    // $('.footer__item-title').click(function () {
+    //     if ($('.footer__item').hasClass('one')) {
+    //         $('.footer__item-title').not($(this)).removeClass('active');
+    //         $('.footer__item-list').not($(this).next()).slideUp(300);
+    //     }
+    //     $(this).toggleClass('active').next().slideToggle(300);
+    // })
 
     // Animation items
     const animItems = document.querySelectorAll('.anim-items'); // Массив анимируемых элементов

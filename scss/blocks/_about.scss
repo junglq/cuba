@@ -90,6 +90,9 @@
 	padding-top: 70px;
 	margin-bottom: 60px;
 	position: relative;
+	img {
+		max-width: 100%;
+	}
 }
 .about__dot {
 	width: 32px;

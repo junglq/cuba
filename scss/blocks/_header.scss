@@ -1,7 +1,7 @@
 .header {
 	position: sticky;
 	top: 0;
-	z-index: 666;
+	z-index: 6666;
 	width: 100%;
 	&:before {
 		content: "";
@@ -33,6 +33,7 @@
 }
 
 .header__list-link {
+	display: block;
 	font-weight: bold;
 	color: #352626;
 	padding: 24px 10px 21px;
