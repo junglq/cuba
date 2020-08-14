@@ -150,6 +150,14 @@ body {
   width: 100%;
 }
 
+.header.active:before {
+  background-color: black;
+}
+
+.header.active a {
+  color: blanchedalmond;
+}
+
 .header:before {
   content: "";
   position: absolute;
@@ -158,6 +166,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: white;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .header__burger {

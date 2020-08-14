@@ -21,21 +21,26 @@ $(document).ready(function () {
     })
 
     // Fixed Header
-    // let scrollOffset = $(window).scrollTop();
-    // checkscroll(scrollOffset);
+    let scrollOffset = $(window).scrollTop();
+    let intro = $('.intro');
+    let introH = intro.innerHeight();
+    console.log(introH);
 
-    // $(window).on('scroll resize', function () {
-    //     scrollOffset = $(this).scrollTop();
-    //     checkscroll(scrollOffset);
-    // })
+    checkscroll(scrollOffset, introH);
 
-    // function checkscroll(scrollOffset) {
-    //     if (scrollOffset > 0) {
-    //         $('.header').addClass('active');
-    //     } else {
-    //         $('.header').removeClass('active');
-    //     }
-    // }
+    $(window).on('scroll resize', function () {
+        scrollOffset = $(this).scrollTop();
+        introH = intro.innerHeight();
+        checkscroll(scrollOffset, introH);
+    })
+
+    function checkscroll(scrollOffset, introH) {
+        if (scrollOffset > introH + 1) {
+            $('.header').addClass('active');
+        } else {
+            $('.header').removeClass('active');
+        }
+    }
 
     // Smooth scroll
     $("[data-scroll]").on("click", function (event) {
