@@ -56,8 +56,19 @@
 	.footer__row {
 		margin-bottom: 0;
 	}
+	.header__body {
+		justify-content: flex-end;
+	}
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+	.header__list {
+		justify-content: flex-end !important;
+	}
+	.header__list-item {
+		margin-bottom: 10px !important;
+	}
+}
 @media (max-width: 540px) {
 	.intro {
 		padding: 10px;

@@ -688,6 +688,22 @@ body {
   .footer__row {
     margin-bottom: 0;
   }
+  .header__body {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .header__list {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  .header__list-item {
+    margin-bottom: 10px !important;
+  }
 }
 
 @media (max-width: 540px) {
