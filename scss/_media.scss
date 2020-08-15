@@ -27,6 +27,9 @@
 }
 
 @media (max-width: 768px) {
+	.header__body {
+		height: 50px;
+	}
 	.intro__title {
 		font-size: 120px;
 	}
